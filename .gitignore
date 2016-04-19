@@ -1,0 +1,28 @@
+# Ignored Folders #
+###################
+/.idea/*
+/media/*
+/var/*
+/downloader/*
+
+# Ignored Files #
+#################
+/app/etc/local.xml
+/magmi/conf/magmi.ini
+/magmi/state/progress.txt
+/magmi/state/trace.txt
+/robots.txt
+/sitemap.xml
+/.htaccess
+/.htaccess.sample
+
+# Ignored Mask Of Files #
+#########################
+*.tgz
+*.sql.gz
+*.sql
+*.tar
+*.zip
+*.tar.gz
+*.gz
+	
