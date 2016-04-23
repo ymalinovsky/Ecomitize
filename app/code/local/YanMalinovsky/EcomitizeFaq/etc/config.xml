@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!--
+/**
+* EcomitizeFaq related module
+*
+* @category    YanMalinovsky
+* @package     YanMalinovsky_EcomitizeFaq
+* @copyright   Copyright (c) 2016 Yan Malinovsky
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <YanMalinovsky_EcomitizeFaq>
+            <version>0.1.0</version>
+        </YanMalinovsky_EcomitizeFaq>
+    </modules>
+    <global>
+        <blocks>
+            <yanmalinovsky_ecomitizefaq>
+                <class>YanMalinovsky_EcomitizeFaq_Block</class>
+            </yanmalinovsky_ecomitizefaq>
+        </blocks>
+        <models>
+            <yanmalinovsky_ecomitizefaq>
+                <class>YanMalinovsky_EcomitizeFaq_Model</class>
+                <resourceModel>yanmalinovsky_ecomitizefaq_resource</resourceModel>
+            </yanmalinovsky_ecomitizefaq>
+            <yanmalinovsky_ecomitizefaq_resource>
+                <class>YanMalinovsky_EcomitizeFaq_Model_Resource</class>
+                <deprecatedNode>yanmalinovsky_ecomitizefaq_mysql4</deprecatedNode>
+                <entities>
+                    <faq>
+                        <table>yanmalinovsky_ecomitizefaq</table>
+                    </faq>
+                </entities>
+            </yanmalinovsky_ecomitizefaq_resource>
+        </models>
+        <resources>
+            <yanmalinovsky_ecomitizefaq_setup>
+                <setup>
+                    <module>YanMalinovsky_EcomitizeFaq</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </yanmalinovsky_ecomitizefaq_setup>
+            <yanmalinovsky_ecomitizefaq_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </yanmalinovsky_ecomitizefaq_write>
+            <yanmalinovsky_ecomitizefaq_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </yanmalinovsky_ecomitizefaq_read>
+        </resources>
+        <helpers>
+            <yanmalinovsky_ecomitizefaq>
+                <class>YanMalinovsky_EcomitizeFaq_Helper</class>
+            </yanmalinovsky_ecomitizefaq>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <yanmalinovsky_ecomitizefaq>
+                <use>admin</use>
+                <args>
+                    <module>YanMalinovsky_EcomitizeFaq</module>
+                    <frontName>ecomitizefaq</frontName>
+                </args>
+            </yanmalinovsky_ecomitizefaq>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <yanmalinovsky_ecomitizefaq>
+                <use>standard</use>
+                <args>
+                    <module>YanMalinovsky_EcomitizeFaq</module>
+                    <frontName>ecomitizefaq</frontName>
+                </args>
+            </yanmalinovsky_ecomitizefaq>
+        </routers>
+        <layout>
+            <updates>
+                <yanmalinovsky_ecomitizefaq>
+                    <file>yanmalinovsky_ecomitizefaq.xml</file>
+                </yanmalinovsky_ecomitizefaq>
+            </updates>
+        </layout>
+    </frontend>
+</config>

@@ -1,0 +1,29 @@
+<?php
+/**
+ * EcomitizeFaq related module
+ *
+ * @category    YanMalinovsky
+ * @package     YanMalinovsky_EcomitizeFaq
+ * @copyright   Copyright (c) 2016 Yan Malinovsky
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+
+<?php $list = $this->getFullCollection() ?>
+
+<?php if ($list->getData()): ?>
+    <h3><?php echo $this->__('FAQ collection - Full list:') ?></h3>
+    <hr />
+    <?php foreach ($list as $faq): ?>
+        <ul>
+            <li><?php echo "{$this->__('Id: ')} {$faq->getId()}" ?></li>
+            <li><?php echo "{$this->__('Question: ')} {$faq->getQuestion()}" ?></li>
+            <li><?php echo "{$this->__('Answer: ')} {$faq->getAnswer()}" ?></li>
+            <?php $faq->getIsActive()? $isActive = $this->__('Yes') : $isActive = $this->__('No') ?>
+            <li><?php echo "{$this->__('Is Active: ')} {$isActive}" ?></li>
+        </ul>
+        <hr />
+    <?php endforeach; ?>
+<?php else: ?>
+    <?php echo $this->__('There are no data in the FAQ collection.') ?>
+<?php endif; ?>
