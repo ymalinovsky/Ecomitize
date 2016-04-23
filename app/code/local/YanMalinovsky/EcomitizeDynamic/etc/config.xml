@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+* EcomitizeDynamic related module
+*
+* @category    YanMalinovsky
+* @package     YanMalinovsky_EcomitizeDynamic
+* @copyright   Copyright (c) 2016 Yan Malinovsky
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <YanMalinovsky_EcomitizeDynamic>
+            <version>0.1.0</version>
+        </YanMalinovsky_EcomitizeDynamic>
+    </modules>
+    <global>
+        <models>
+            <yanmalinovsky_ecomitizedynamic>
+                <class>YanMalinovsky_EcomitizeDynamic_Model</class>
+            </yanmalinovsky_ecomitizedynamic>
+        </models>
+        <resources>
+            <yanmalinovsky_ecomitizedynamic_setup>
+                <setup>
+                    <module>YanMalinovsky_EcomitizeDynamic</module>
+                </setup>
+            </yanmalinovsky_ecomitizedynamic_setup>
+        </resources>
+        <options_container>
+            <value>
+                <option1 translate="label">
+                    <value>Dynamic Value - One</value>
+                    <label>Dynamic Value - One</label>
+                </option1>
+                <option2 translate="label">
+                    <value>Dynamic Value - Two</value>
+                    <label>Dynamic Value - Two</label>
+                </option2>
+                <option3 translate="label">
+                    <value>Dynamic Value - Three</value>
+                    <label>Dynamic Value - Three</label>
+                </option3>
+            </value>
+        </options_container>
+    </global>
+</config>
